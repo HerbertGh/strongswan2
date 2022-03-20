@@ -8,6 +8,8 @@ services:
   #    - NET_ADMIN
   #    - SYS_ADMIN
   #    - SYS_MODULE
+    securityContext:
+     privileged: true
     stdin_open: true
     tty: true
     #volumes:
