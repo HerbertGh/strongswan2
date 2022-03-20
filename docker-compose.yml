@@ -10,7 +10,7 @@ services:
   #    - SYS_MODULE
   #  securityContext:
   #  args: privileged
-   stdin_open: true
+    stdin_open: true
     tty: true
     #volumes:
     #  - ./server:/etc/swanctl
