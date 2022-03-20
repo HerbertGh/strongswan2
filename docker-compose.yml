@@ -2,15 +2,15 @@ version: "3"
 
 services:
   vpn-server:
-    image: hwdsl2/ipsec-vpn-server
+    image: aeron/ikev2-strongswan-vpn
     container_name: vpn-server
   #  cap_add:
   #    - NET_ADMIN
   #    - SYS_ADMIN
   #    - SYS_MODULE
   #  securityContext:
-    args: privileged
-    stdin_open: true
+  #  args: privileged
+   stdin_open: true
     tty: true
     #volumes:
     #  - ./server:/etc/swanctl
