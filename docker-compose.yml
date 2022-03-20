@@ -9,7 +9,7 @@ services:
   #    - SYS_ADMIN
   #    - SYS_MODULE
   #  securityContext:
-    args: -d --privileged
+    args: privileged
     stdin_open: true
     tty: true
     #volumes:
