@@ -14,8 +14,8 @@ services:
       - ./server:/etc/swanctl
       - ./strongswan.conf:/etc/strongswan.conf
     networks:
-      internet:
-         ipv4_address: 192.168.0.2
+      #internet:
+      #   ipv4_address: 192.168.0.2
       intranet:
          ipv4_address: 10.1.0.2
  # vpn-client:
@@ -37,11 +37,11 @@ services:
  #        ipv4_address: 192.168.0.3
 
 networks:
-  internet:
-    ipam:
-      driver: default 
-      config:
-        - subnet: 192.168.0.0/24
+  #internet:
+  #  ipam:
+  #    driver: default 
+  #    config:
+  #      - subnet: 192.168.0.0/24
   intranet:
      ipam:
         driver: default
