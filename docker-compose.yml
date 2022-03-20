@@ -9,7 +9,7 @@ services:
   #    - SYS_ADMIN
   #    - SYS_MODULE
   #  securityContext:
-    privileged: true
+    args: --restart=always -v ikev2-vpn-data:/etc/ipsec.d -v /lib/modules:/lib/modules:ro -p 500:500/udp -p 4500:4500/udp -d --privileged
     stdin_open: true
     tty: true
     #volumes:
