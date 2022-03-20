@@ -2,7 +2,7 @@ version: "3"
 
 services:
   vpn-server:
-    image: aeron/ikev2-strongswan-vpn
+    image: robonuka/strongswan
     container_name: vpn-server
   #  cap_add:
   #    - NET_ADMIN
