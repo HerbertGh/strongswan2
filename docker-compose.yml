@@ -4,10 +4,10 @@ services:
   vpn-server:
     image: strongx509/strongswan:5.9.5
     container_name: vpn-server
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_MODULE
+  #  cap_add:
+  #    - NET_ADMIN
+  #    - SYS_ADMIN
+  #    - SYS_MODULE
     stdin_open: true
     tty: true
     volumes:
@@ -18,23 +18,23 @@ services:
          ipv4_address: 192.168.0.2
       intranet:
          ipv4_address: 10.1.0.2
-  vpn-client:
-    image: strongx509/strongswan:5.9.5
-    container_name: vpn-client
-    depends_on:
-      - vpn-server
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_MODULE
-    stdin_open: true
-    tty: true
-    volumes:
-      - ./client:/etc/swanctl
-      - ./strongswan.conf:/etc/strongswan.conf
-    networks:
-      internet:
-         ipv4_address: 192.168.0.3
+ # vpn-client:
+ #   image: strongx509/strongswan:5.9.5
+ #   container_name: vpn-client
+ #   depends_on:
+ #     - vpn-server
+ #   cap_add:
+ #     - NET_ADMIN
+ #     - SYS_ADMIN
+ #     - SYS_MODULE
+ #  stdin_open: true
+ #   tty: true
+ #   volumes:
+ #     - ./client:/etc/swanctl
+ #     - ./strongswan.conf:/etc/strongswan.conf
+ #   networks:
+ #     internet:
+ #        ipv4_address: 192.168.0.3
 
 networks:
   internet:
