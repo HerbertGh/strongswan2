@@ -2,7 +2,7 @@ version: "3"
 
 services:
   vpn-server:
-    image: strongx509/strongswan:5.9.5
+    image: hwdsl2/ipsec-vpn-server
     container_name: vpn-server
   #  cap_add:
   #    - NET_ADMIN
@@ -10,9 +10,9 @@ services:
   #    - SYS_MODULE
     stdin_open: true
     tty: true
-    volumes:
-      - ./server:/etc/swanctl
-      - ./strongswan.conf:/etc/strongswan.conf
+    #volumes:
+    #  - ./server:/etc/swanctl
+    #  - ./strongswan.conf:/etc/strongswan.conf
     networks:
       #internet:
       #   ipv4_address: 192.168.0.2
